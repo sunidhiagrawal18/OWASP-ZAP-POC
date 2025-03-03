@@ -1,4 +1,9 @@
 trigger:
+- task: SnykSecurityScan@1
+  inputs:
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
 - main  # Runs the pipeline when code is pushed to the main branch
 
 pool:
